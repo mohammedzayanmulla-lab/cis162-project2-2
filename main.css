@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,33 +6,35 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eef4fa;
-    color: #222;
+    background-color: #121212; /* Deep black background */
+    color: #f5f5f5; /* Light grey/white text for readability */
     line-height: 1.6;
 }
 
 /* HEADER */
-
 header {
-    background-color: #003366;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 35px;
+    border-bottom: 2px solid #cefc02; /* Volta Green accent line */
 }
 
 header h1 {
     font-size: 48px;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 header p {
     font-size: 20px;
+    color: #bbbbbb;
 }
 
 /* NAVIGATION */
-
 nav {
-    background-color: #0055a5;
+    background-color: #1a1a1a;
 }
 
 nav ul {
@@ -49,17 +50,19 @@ nav li {
 nav a {
     display: block;
     padding: 18px 30px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #003366;
+    background-color: #cefc02; /* Volta Green hover */
+    color: #121212; /* Dark text on hover for sharp contrast */
 }
 
 /* MAIN */
-
 main {
     width: 90%;
     max-width: 1200px;
@@ -67,15 +70,15 @@ main {
 }
 
 /* HERO */
-
 .hero {
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: white;
+    background-color: #1e1e1e;
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 40px;
+    border-left: 4px solid #cefc02; /* Subtle Volta accent */
 }
 
 .hero img {
@@ -88,17 +91,22 @@ main {
 }
 
 .hero-text h2 {
-    color: #003366;
+    color: #ffffff;
     margin-bottom: 15px;
     font-size: 34px;
+    text-transform: uppercase;
+}
+
+.hero-text h2 span {
+    color: #cefc02; /* Optional: Wrap part of your H2 in a span to make it green */
 }
 
 .hero-text p {
     font-size: 18px;
+    color: #cccccc;
 }
 
 /* CATEGORY CARDS */
-
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -108,13 +116,17 @@ main {
 }
 
 .card {
-    background-color: white;
+    background-color: #2a2a2a; /* Sleek grey for cards */
     width: 48%;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    transition: transform 0.3s ease;
+}
 
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
@@ -126,53 +138,60 @@ main {
 }
 
 .card h3 {
-    color: #003366;
+    color: #ffffff;
     margin-bottom: 10px;
     font-size: 28px;
+    text-transform: uppercase;
 }
 
 .card p {
     margin-bottom: 20px;
     font-size: 17px;
+    color: #bbbbbb;
 }
 
 .card a {
     display: inline-block;
-    background-color: #0055a5;
-    color: white;
+    background-color: #cefc02; /* Strong Volta Green call to action */
+    color: #121212;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .card a:hover {
-    background-color: #003366;
+    background-color: #b5de02; /* Slightly darker green on hover */
 }
 
 /* MISSION */
-
 .mission {
-    background-color: white;
+    background-color: #1e1e1e;
     padding: 30px;
     border-radius: 10px;
+    text-align: center;
+    border-bottom: 4px solid #cefc02;
 }
 
 .mission h2 {
-    color: #003366;
+    color: #cefc02;
     margin-bottom: 15px;
     font-size: 32px;
+    text-transform: uppercase;
 }
 
 .mission p {
     font-size: 18px;
+    color: #cccccc;
 }
 
 /* FOOTER */
-
 footer {
     margin-top: 40px;
-    background-color: #003366;
-    color: white;
+    background-color: #000000;
+    color: #777777;
     text-align: center;
     padding: 25px;
 }
@@ -181,12 +200,137 @@ footer p {
     margin: 8px;
 }
 
+/* ========================= */
+/* CONTACT FORM */
+/* ========================= */
+.form-section {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-section h2 {
+    color: #cefc02;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e1e1e; /* Dark inputs */
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #cefc02; /* Glows green when typing */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.buttons input {
+    background-color: #cefc02;
+    color: #121212;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons input:hover {
+    background-color: #b5de02;
+}
+
+/* ========================= */
+/* IMAGE GALLERY */
+/* ========================= */
+.gallery-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    width: 260px;
+    background-color: #2a2a2a;
+    border: none; /* Removed the light border for a cleaner dark mode look */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(206, 252, 2, 0.2); /* Slight green glow on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gallery-item .desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #cccccc;
+}
+
 /* RESPONSIVE */
-
 @media (max-width: 900px) {
-
     .hero {
         flex-direction: column;
+        border-left: none;
+        border-top: 4px solid #cefc02;
     }
 
     .hero img {
@@ -208,118 +352,4 @@ footer p {
     nav a {
         text-align: center;
     }
-
-}
-/* ========================= */
-/* CONTACT FORM */
-/* ========================= */
-
-.form-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
-}
-
-.form-section h2 {
-    color: #003366;
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 32px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    color: #003366;
-}
-
-input[type=text],
-input[type=email],
-input[type=number],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.buttons {
-    margin-top: 25px;
-    display: flex;
-    gap: 15px;
-}
-
-.buttons input {
-    background-color: #0055a5;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.buttons input:hover {
-    background-color: #003366;
-}
-
-
-/* ========================= */
-/* IMAGE GALLERY */
-/* ========================= */
-
-.gallery-title {
-    text-align: center;
-    color: #003366;
-    font-size: 34px;
-    margin-bottom: 25px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-.gallery-item {
-    width: 260px;
-    background-color: white;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    box-shadow: 0px 3px 8px rgba(0,0,0,.15);
-}
-
-.gallery-item:hover {
-    transform: scale(1.03);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.gallery-item .desc {
-    padding: 15px;
-    text-align: center;
-    font-size: 16px;
 }
